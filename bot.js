@@ -112,7 +112,7 @@ async function playGame(gameIndex) {
     console.log(`Game ${gameIndex} | Guess ${attempts}: ${currentGuess} -> ${res.result.join("")}`);
 
     if (res.result.every((v) => v === 2)) {
-      console.log(`✅ Solved in ${attempts} attempts!`);
+      console.log(`Solved in ${attempts} attempts!`);
       fs.appendFileSync("data.csv", `${gameIndex},${opener},${currentGuess},${attempts}\n`);
       break;
     }
@@ -132,7 +132,7 @@ async function playGame(gameIndex) {
 }
 
 async function startSimulations(n = 10000) {
-  fs.writeFileSync("data.csv", "game,opener,finalWord,attempts\n"); // CSV header
+  fs.writeFileSync("data.csv", "game,opener,finalWord,attempts\n"); 
 
   for (let i = 0; i < n; i++) {
     console.log(`\n=== Starting Game #${i + 1} ===`);
