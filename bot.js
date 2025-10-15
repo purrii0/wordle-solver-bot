@@ -140,7 +140,7 @@ async function startSimulations(n = 10000) {
     await playGame(i + 1);
   }
 
-  console.log(`\n🏁 Finished ${n} simulations!`);
+  console.log(`\n Finished ${n} simulations!`);
 }
 
 startSimulations();
